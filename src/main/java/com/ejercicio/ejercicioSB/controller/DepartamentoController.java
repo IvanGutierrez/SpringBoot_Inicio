@@ -28,4 +28,9 @@ public class DepartamentoController {
     public Departamento create(@RequestBody Departamento departamento){
         return departamentoService.create(departamento);
     }
+
+    @PutMapping("/departamentos")
+    public Departamento update(@RequestBody Departamento departamento){
+        return departamentoService.update(departamento);
+    }
 }
