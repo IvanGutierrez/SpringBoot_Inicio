@@ -9,5 +9,6 @@ public interface IDepartamentoService {
     public Departamento readById(Integer id);
     public Departamento create(Departamento departamento);
     public Departamento update(Departamento departamento);
+    public String delete(Departamento departamento);
 
 }

@@ -33,4 +33,9 @@ public class DepartamentoController {
     public Departamento update(@RequestBody Departamento departamento){
         return departamentoService.update(departamento);
     }
+
+    @DeleteMapping("departamentos")
+    public String delete(@RequestBody Departamento departamento){
+        return departamentoService.delete(departamento);
+    }
 }
