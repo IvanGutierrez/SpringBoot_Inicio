@@ -23,4 +23,9 @@ public class DepartamentoController {
     public Departamento readById(@PathVariable Integer id){
         return departamentoService.readById(id);
     }
+
+    @PostMapping("/departamento")
+    public Departamento create(@RequestBody Departamento departamento){
+        return departamentoService.create(departamento);
+    }
 }
