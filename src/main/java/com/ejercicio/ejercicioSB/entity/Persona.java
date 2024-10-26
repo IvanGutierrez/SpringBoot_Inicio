@@ -20,6 +20,8 @@ public class Persona {
     private String nombre;
     private String direccion;
     private Integer edad;
-    @OneToMany
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_departamento")
     private Departamento departamento;
 }
