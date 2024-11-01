@@ -16,12 +16,14 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "direccion")
     private String direccion;
+    @Column(name = "edad")
     private Integer edad;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_departamento")
-    private Departamento departamento;
+    private Departamento idDepartamento;
 }
