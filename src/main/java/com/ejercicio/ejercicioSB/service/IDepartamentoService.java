@@ -1,6 +1,7 @@
 package com.ejercicio.ejercicioSB.service;
 
 import com.ejercicio.ejercicioSB.entity.Departamento;
+import org.springframework.boot.DefaultApplicationArguments;
 
 import java.util.List;
 
@@ -11,5 +12,8 @@ public interface IDepartamentoService {
     public Departamento update(Departamento departamento);
     public String delete(Departamento departamento);
     public String deleteById(Integer id);
+    public List<Departamento> findByPrecio(Double precio);
+    public List<Departamento> findByPrecioLessThan(Double precio);
+    public List<Departamento> findByPrecioAndM2(Double precio, Double m2);
 
 }

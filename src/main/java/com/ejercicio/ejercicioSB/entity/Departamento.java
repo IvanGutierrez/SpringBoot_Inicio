@@ -19,6 +19,7 @@ public class Departamento {
 
     @Column(name = "precio")
     private Double precio;
+
     @Column(name = "is_active")
     private Boolean isActive;
 

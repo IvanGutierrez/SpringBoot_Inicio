@@ -22,6 +22,8 @@ public class Persona {
     private String direccion;
     @Column(name = "edad")
     private Integer edad;
+    @Column(name = "is_active")
+    private Boolean isActive;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_departamento")

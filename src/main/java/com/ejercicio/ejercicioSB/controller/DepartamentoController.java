@@ -24,12 +24,17 @@ public class DepartamentoController {
         return departamentoService.readById(id);
     }
 
+    @GetMapping("/departamento/findByPrecioLessThan")
+    public List<Departamento> findByPrecioLessThan(@RequestParam Double precio){
+        return departamentoService.findByPrecioLessThan(precio);
+    }
+
     @PostMapping("/departamento")
     public Departamento create(@RequestBody Departamento departamento){
         return departamentoService.create(departamento);
     }
 
-    @PutMapping("/departamentos")
+    @PutMapping("/departamento")
     public Departamento update(@RequestBody Departamento departamento){
         return departamentoService.update(departamento);
     }
@@ -42,5 +47,11 @@ public class DepartamentoController {
     @DeleteMapping("departamentos")
     public String deleteById(@RequestParam Integer id){
         return departamentoService.deleteById(id);
+    }
+
+    @GetMapping("/departamento/precioM2")
+    public List<Departamento> findByPrecioAndM2(@RequestParam Double precio,
+                                                @RequestParam Double m2){
+        return departamentoService.findByPrecioAndM2(precio, m2);
     }
 }
