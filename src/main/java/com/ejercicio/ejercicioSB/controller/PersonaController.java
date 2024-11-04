@@ -1,6 +1,7 @@
 package com.ejercicio.ejercicioSB.controller;
 
 import com.ejercicio.ejercicioSB.entity.Persona;
+import com.ejercicio.ejercicioSB.model.PersonaResponse;
 import com.ejercicio.ejercicioSB.service.impl.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,12 +34,19 @@ public class PersonaController {
         return personaService.update(persona);
     }
 
-//    public String delete(@RequestBody Persona persona){
-//        return personaService.delete(persona);
+    @DeleteMapping("/personaDelete")
+    public String delete(@RequestBody Persona persona){
+        return personaService.delete(persona);
 //        return "Persona " + persona.getNombre() + " eliminada";
-//    }
+    }
 
-    public String deleteById(@PathVariable Integer id) {
+    @DeleteMapping("/persona")
+    public String deleteById(@RequestParam Integer id) {
         return personaService.deleteById(id);
+    }
+
+    @GetMapping("/personasResponse")
+    public List<PersonaResponse> readAllResponse(){
+        return personaService.readAllResponse();
     }
 }

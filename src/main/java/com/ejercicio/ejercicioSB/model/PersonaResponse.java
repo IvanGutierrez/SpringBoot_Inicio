@@ -12,5 +12,5 @@ public class PersonaResponse {
     private Integer id;
     private String nombre;
     private Integer edad;
-    private Departamento idDepartamento;
+    private Integer idDepartamento;
 }

@@ -11,7 +11,9 @@ public interface IPersonaService {
     public Persona readById(Integer id);
     public Persona create(Persona persona);
     public Persona update(Persona persona);
-//    public String delete(Persona persona);
+    public String delete(Persona persona);
     public String deleteById(Integer id);
+
+    public List<PersonaResponse> readAllResponse();
 
 }
