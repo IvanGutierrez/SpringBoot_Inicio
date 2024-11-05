@@ -3,10 +3,7 @@ package com.ejercicio.ejercicioSB.controller;
 import com.ejercicio.ejercicioSB.model.Person;
 import com.ejercicio.ejercicioSB.service.impl.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,10 @@ public class PersonController {
     @GetMapping("/persons/{id}")
     public Person readById(@PathVariable("id") Integer id){
         return personService.readById(id);
+    }
+
+    @PostMapping("/persons")
+    public Person create(@RequestBody Person person){
+        return personService.create(person);
     }
 }

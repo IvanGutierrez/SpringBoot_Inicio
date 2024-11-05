@@ -24,4 +24,9 @@ public class PersonService implements IPersonService {
 //        Optional<Person> personOptional = personClient.getPersonById(id);
         return personClient.getPersonById(id);
     }
+
+    @Override
+    public Person create(Person person) {
+        return personClient.createPerson(person);
+    }
 }
