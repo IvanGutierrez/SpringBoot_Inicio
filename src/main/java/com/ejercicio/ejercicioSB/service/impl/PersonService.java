@@ -29,4 +29,9 @@ public class PersonService implements IPersonService {
     public Person create(Person person) {
         return personClient.createPerson(person);
     }
+
+    @Override
+    public Person update(Integer id, Person person) {
+        return personClient.updatePerson(id, person);
+    }
 }
