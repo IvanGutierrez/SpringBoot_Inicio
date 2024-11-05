@@ -34,4 +34,9 @@ public class PersonService implements IPersonService {
     public Person update(Integer id, Person person) {
         return personClient.updatePerson(id, person);
     }
+
+    @Override
+    public void delete(Integer id) {
+        personClient.deletePerson(id);
+    }
 }

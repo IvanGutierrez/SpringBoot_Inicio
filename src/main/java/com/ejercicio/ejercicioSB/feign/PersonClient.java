@@ -23,4 +23,7 @@ public interface PersonClient {
 
     @PutMapping("/personas/{id}")
     Person updatePerson(@PathVariable("id") Integer id, @RequestBody Person person);
+
+    @DeleteMapping("/personas/{id}")
+    void deletePerson(@PathVariable("id") Integer id);
 }

@@ -14,5 +14,6 @@ public interface IPersonService {
     //POST
     public Person create(Person person);
     public Person update(Integer id, Person person);
+    public void delete(Integer id);
 
 }
